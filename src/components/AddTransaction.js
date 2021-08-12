@@ -13,10 +13,13 @@ export const AddTransaction = () => {
     }
     const typeAmount = e => {
         setAmount(e.target.value)
+
     }
 
     const onSubmit = e => {
-        e.preventDefault();
+        e.preventDefault()
+        setText('')
+        setAmount('')
 
         const newTransaction = {
             id: Math.floor(Math.random() * 987654321),
@@ -25,6 +28,7 @@ export const AddTransaction = () => {
         }
 
         addTransaction(newTransaction)
+
     }
 
     return (
